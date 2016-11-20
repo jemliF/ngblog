@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>NGBlog</title>
+    <link href="node_modules/angular-material/angular-material.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="node_modules/angular-storage/dist/angular-storage.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="routing.js"></script>
+    <!-- Controllers -->
+    <script src="src/controllers/home.ctrl.js"></script>
+    <script src="src/controllers/login.ctrl.js"></script>
+    <script src="src/controllers/signup.ctrl.js"></script>
+</head>
+<body ng-app="ngblog" ng-cloak>
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <a aria-label="Home" ui-sref="home" ui-sref-active="active">Angular Auth</a>
+        <span flex></span>
+
+        <md-button aria-label="Login" ui-sref="login" ui-sref-active="active">Login</md-button>
+        <md-button aria-label="Logout">logout</md-button>
+    </div>
+</md-toolbar>
+<md-content flex layout-padding>
+    <ui-view></ui-view>
+
+</md-content>
+</body>
+</html>

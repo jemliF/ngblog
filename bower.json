@@ -1,0 +1,22 @@
+{
+  "name": "ngblog",
+  "authors": [
+    "jemliF <jemlifathi2013@gmail.com>"
+  ],
+  "description": "simple angularjs && elasticsearch blog app",
+  "main": "index.html",
+  "keywords": [
+    "js",
+    "ng",
+    "es"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
