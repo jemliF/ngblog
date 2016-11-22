@@ -2,7 +2,6 @@
     <h1>{{title}}</h1>
     <h4>Inputs with <span style="color: red;">*</span> are required!</h4><br>
 </div>
-
 <form name="signup-form" id="signup-form" layout="row">
     <div flex>
         <md-input-container class="md-block">
@@ -37,7 +36,6 @@
         </md-input-container>
     </div>
     <div flex>
-
         <md-input-container class="md-block">
             <label>Password</label>
             <input required type="password" name="password" ng-model="author.password"
@@ -58,6 +56,6 @@
                 </div>
             </div>
         </md-input-container>
-        <md-button class="md-raised md-primary" ng-click="signup()">Submit</md-button>
+        <md-button class="md-raised md-primary" ng-click="signup()" ng-disabled="signup-form.$invalid">Submit</md-button>
     </div>
 </form>

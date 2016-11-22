@@ -1,1 +1,30 @@
-<h1>{{title}}</h1>
+<div layout="column" name="login">
+    <h1>{{title}}</h1>
+    <h4>Inputs with <span style="color: red;">*</span> are required!</h4><br>
+</div>
+<form name="login-form" id="login-form" layout="row">
+    <div flex>
+        <md-input-container>
+            <label>Email</label>
+            <input required type="email" name="email" ng-model="author.email" ng-required>
+            <div ng-messages="login-form.email.$error" role="alert">
+                <div ng-message-exp="['required']">
+                    Your email is required!
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+    <div flex>
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input required type="password" name="password" ng-model="author.password" ng-required>
+            <div ng-messages="login-form.password.$error" role="alert">
+                <div ng-message-exp="['required']">
+                    Your password is required!
+                </div>
+            </div>
+        </md-input-container>
+        <md-button class="md-raised md-primary" ng-click="login()" ng-disabled="login-form.$invalid">Submit</md-button>
+    </div>
+    <div flex></div>
+</form>

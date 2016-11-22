@@ -1,6 +1,7 @@
 'use strict';
 
 ngblog.service('AuthorService', function ($http) {
+    var baseUrl = 'http://localhost:9200/ngblog/author';
 
     this.new = function (author) {
         var currentdate = new Date();
@@ -11,6 +12,29 @@ ngblog.service('AuthorService', function ($http) {
             + currentdate.getMinutes() + ":"
             + currentdate.getSeconds();
         author.created_at = datetime;
-        return $http.post('http://localhost:9200/ngblog/author', author);
+        return $http.post(baseUrl, author);
+    }
+
+    this.findByEmailAndPassword = function (email, password) {
+        var query = {
+            "query": {
+                "filtered": {
+                    "query": {
+                        "match": {
+                            "email": email
+                        }
+                    },
+                    "filter": {
+                        "query": {
+                            "match": {
+                                "password": password
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        console.log('query: ', JSON.stringify(query));
+        return $http.post(baseUrl + '/_search', query);
     }
 });
