@@ -1,1 +1,63 @@
-{{title}}
+<div layout="column" name="signup">
+    <h1>{{title}}</h1>
+    <h4>Inputs with <span style="color: red;">*</span> are required!</h4><br>
+</div>
+
+<form name="signup-form" id="signup-form" layout="row">
+    <div flex>
+        <md-input-container class="md-block">
+            <label>First Name</label>
+            <input required type="text" name="firstname" ng-model="author.firstname"
+                   minlength="3" maxlength="100">
+            <div ng-messages="signup-form.firstname.$error" role="alert">
+                <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                    Your first name must be between 3 and 100 characters long.
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Last Name</label>
+            <input required type="text" name="lastname" ng-model="author.lastname"
+                   minlength="3" maxlength="100">
+            <div ng-messages="signup-form.lastname.$error" role="alert">
+                <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                    Your last name must be between 3 and 100 characters long.
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>Email</label>
+            <input required type="email" name="email" ng-model="author.email"
+                   minlength="10" maxlength="100"/>
+            <div ng-messages="signup-form.email.$error" role="alert">
+                <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                    Your email must be between 10 and 100 characters long and look like an e-mail address.
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+    <div flex>
+
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input required type="password" name="password" ng-model="author.password"
+                   minlength="5" maxlength="100">
+            <div ng-messages="signup-form.password.$error" role="alert">
+                <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                    Your password must be between 5 and 100 characters long.
+                </div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Retype Password</label>
+            <input required type="password" name="password2" ng-model="password2"
+                   minlength="5" maxlength="100">
+            <div ng-messages="signup-form.password.$error" role="alert">
+                <div style="color: red;" ng-show="author.password != password2 && password2">
+                    Retype password correctly!
+                </div>
+            </div>
+        </md-input-container>
+        <md-button class="md-raised md-primary" ng-click="signup()">Submit</md-button>
+    </div>
+</form>

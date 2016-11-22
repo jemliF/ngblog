@@ -12,7 +12,7 @@ ngblog.config(function ($stateProvider) {
             name: 'signup',
             url: '/signup',
             controller: 'SignUpController',
-            templateUrl: 'views/login.tmpl.html'
+            templateUrl: 'views/signup.tmpl.html'
         })
         .state({
             name: 'home',
