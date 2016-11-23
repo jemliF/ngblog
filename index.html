@@ -8,7 +8,10 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>NGBlog</title>
     <link href="node_modules/angular-material/angular-material.min.css" rel="stylesheet">
-    <!--link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="vendor/css/style.css"
+          rel="stylesheet">
 
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="node_modules/angular/angular.min.js"></script>
@@ -31,17 +34,11 @@
     <script src="src/controllers/home.ctrl.js"></script>
     <script src="src/controllers/login.ctrl.js"></script>
     <script src="src/controllers/signup.ctrl.js"></script>
+    <!-- directives -->
+    <script src="src/directives/toolbar.dir.js"></script>
 </head>
 <body ng-app="ngblog" ng-cloak>
-<md-toolbar>
-    <div class="md-toolbar-tools">
-        <a aria-label="Home" ui-sref="home" ui-sref-active="active">NG Blog</a>
-        <span flex></span>
-
-        <md-button aria-label="Login" ui-sref="login" ui-sref-active="active">Login</md-button>
-        <md-button aria-label="SignUp" ui-sref="signup" ui-sref-active="active">SignUp</md-button>
-    </div>
-</md-toolbar>
+<toolbar></toolbar>
 <md-content flex layout-padding>
     <ui-view></ui-view>
 </md-content>

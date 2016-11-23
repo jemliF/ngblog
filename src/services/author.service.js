@@ -3,6 +3,10 @@
 ngblog.service('AuthorService', function ($http) {
     var baseUrl = 'http://localhost:9200/ngblog/author';
 
+    this.isLoggedIn = function () {
+        return localStorage.getItem('user');
+    }
+
     this.new = function (author) {
         var currentdate = new Date();
         var datetime = currentdate.getDate() + "/"
