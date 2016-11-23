@@ -1,10 +1,14 @@
 'use strict';
 
-ngblog.service('AuthorService', function ($http) {
+ngblog.service('AuthorService', function ($http, $state) {
     var baseUrl = 'http://localhost:9200/ngblog/author';
 
     this.isLoggedIn = function () {
         return localStorage.getItem('user');
+    }
+    this.logout = function () {
+        localStorage.removeItem('user');
+        $state.go('login');
     }
 
     this.new = function (author) {

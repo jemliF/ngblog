@@ -12,8 +12,9 @@
         <md-button class="md-fab md-mini" aria-label="New Article" ng-show="toolbar.authorService.isLoggedIn()">
             <md-icon md-svg-icon="core:alarm-add" style="color:#000;" aria-label="Add"></md-icon>
         </md-button>
-        <md-button class="md-fab md-mini" aria-label="Logout" ng-show="toolbar.authorService.isLoggedIn()">
-            <md-icon md-svg-icon="core:alarm-add" style="color:#000;" aria-label="Add"></md-icon>
+        <md-button aria-label="Logout" ng-show="toolbar.authorService.isLoggedIn()"
+                   ng-click="toolbar.authorService.logout()">
+            Logout
         </md-button>
     </div>
 </md-toolbar>
