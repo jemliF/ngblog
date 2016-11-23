@@ -9,7 +9,8 @@
         <md-button aria-label="SignUp" ui-sref="signup" ui-sref-active="active"
                    ng-hide="toolbar.authorService.isLoggedIn()">SignUp
         </md-button>
-        <md-button class="md-fab md-mini" aria-label="New Article" ng-show="toolbar.authorService.isLoggedIn()">
+        <md-button ui-sref="new" ui-sref-active="active" class="md-fab md-mini" aria-label="New Article"
+                   ng-show="toolbar.authorService.isLoggedIn()">
             <md-icon md-svg-icon="core:alarm-add" style="color:#000;" aria-label="Add"></md-icon>
         </md-button>
         <md-button aria-label="Logout" ng-show="toolbar.authorService.isLoggedIn()"

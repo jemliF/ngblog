@@ -15,6 +15,7 @@ ngblog.controller('LoginController', function ($scope, AuthorService, $mdToast, 
             console.log(res);
             if (res.data.hits.total > 0) {
                 localStorage.setItem('user', JSON.stringify(res.data.hits.hits[0]._source));
+                localStorage.setItem('user-id', JSON.stringify(res.data.hits.hits[0]._id));
                 toast = $mdToast.simple()
                     .content('Welcome!')
                     .hideDelay(3000)

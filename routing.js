@@ -28,6 +28,15 @@ ngblog.config(function ($stateProvider) {
             resolve: {
                 redirectIfNotAuthenticated: _redirectIfNotAuthenticated
             }
+        })
+        .state({
+            name: 'new',
+            url: '/new',
+            controller: 'NewController',
+            templateUrl: 'views/new.tmpl.html',
+            resolve: {
+                redirectIfNotAuthenticated: _redirectIfNotAuthenticated
+            }
         });
     $stateProvider
         .state("otherwise", {url: '/home'});

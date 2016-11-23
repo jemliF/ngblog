@@ -1,0 +1,32 @@
+<div layout="column" name="new">
+    <h1>{{title}}</h1>
+    <h4>Inputs with <span style="color: red;">*</span> are required!</h4><br>
+</div>
+<form name="new-form" id="new-form" layout="row">
+    <div flex="40">
+        <md-input-container>
+            <label>Title</label>
+            <input required type="title" name="title" ng-model="article.title" ng-required>
+            <div ng-messages="new-form.title.$error" role="alert">
+                <div ng-message-exp="['required']">
+                    Title is required!
+                </div>
+            </div>
+        </md-input-container>
+        <md-chips ng-model="article.tags" readonly="false" md-removable="true"></md-chips>
+    </div>
+    <div flex="60">
+        <md-input-container class="md-block">
+            <label>Content</label>
+            <textarea required type="content" name="content" ng-model="article.content" ng-required rows="10"
+                      md-select-on-focus></textarea>
+            <div ng-messages="new-form.content.$error" role="alert">
+                <div ng-message-exp="['required']">
+                    Content is required!
+                </div>
+            </div>
+        </md-input-container>
+        <md-button class="md-raised md-primary" ng-click="new()" ng-disabled="new-form.$invalid">Submit</md-button>
+    </div>
+    <div flex></div>
+</form>
