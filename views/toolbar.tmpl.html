@@ -11,11 +11,11 @@
         </md-button>
         <md-button ui-sref="new" ui-sref-active="active" class="md-fab md-mini" aria-label="New Article"
                    ng-show="toolbar.authorService.isLoggedIn()">
-            <md-icon md-svg-icon="core:alarm-add" style="color:#000;" aria-label="Add"></md-icon>
+            <md-icon md-svg-src="vendor/icons/ic_edit_black_18px.svg" aria-label="New"></md-icon>
         </md-button>
         <md-button aria-label="Logout" ng-show="toolbar.authorService.isLoggedIn()"
-                   ng-click="toolbar.authorService.logout()">
-            Logout
+                   ng-click="toolbar.authorService.logout()">Logout
+            <!--i class="material-icons md-48 md-light">edit</i-->
         </md-button>
     </div>
 </md-toolbar>

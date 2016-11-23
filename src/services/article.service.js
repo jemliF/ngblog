@@ -5,14 +5,54 @@ ngblog.service('ArticleService', function ($http) {
 
     this.new = function (article) {
         var currentdate = new Date();
-        var datetime = currentdate.getDate() + "/"
-            + (currentdate.getMonth() + 1) + "/"
-            + currentdate.getFullYear() + " "
+        var datetime = currentdate.getFullYear() + "-"
+            + (currentdate.getMonth() + 1) + "-"
+            + currentdate.getDate() + " "
             + currentdate.getHours() + ":"
             + currentdate.getMinutes() + ":"
             + currentdate.getSeconds();
         article.created_at = datetime;
         article.author = String(localStorage.getItem('user-id'));
         return $http.post(baseUrl, article);
+    }
+
+    this.getAllArticles = function () {
+        var query = {
+            query: {
+                match_all: {}
+            }
+        }
+        return $http.post(baseUrl + '/_search', query);
+    }
+
+    this.getArticleById = function (id) {
+        return $http.get(baseUrl + '/' + id);
+    }
+
+    this.findByTitleOrContent = function (text) {
+        var query = {
+            "query": {
+                "filtered": {
+                    "query": {
+                        "match_all": {}
+                    },
+                    "filter": {
+                        "or": [
+                            {
+                                "term": {
+                                    "title": text
+                                }
+                            },
+                            {
+                                "term": {
+                                    "content": text
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+        return $http.post(baseUrl + '/_search', query);
     }
 });

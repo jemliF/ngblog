@@ -1,1 +1,45 @@
 <md-subheader class="md-primary"><h1>{{title}}</h1></md-subheader>
+<div layout="row">
+    <md-list flex="60">
+        <md-list-item class="md-3-line" ng-repeat="article in articles">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline md-primary">{{article._source.title}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p style="text-align: justify">{{article._source.content| limitTo:400}}...</p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button ng-click="readMore(article._id)" class="md-raised md-primary">Read More</md-button>
+                </md-card-actions>
+            </md-card>
+        </md-list-item>
+    </md-list>
+    <md-divider></md-divider>
+    <form name="search-form" flex layout="column">
+        <md-input-container>
+            <label>Search</label>
+            <input type="search" name="search" ng-model="search" ng-change="doSearch()"><br>
+        </md-input-container>
+        <md-list>
+            <md-list-item class="md-3-line" ng-repeat="article in results">
+                <md-card>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline md-primary">{{article._source.title}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <p style="text-align: justify">{{article._source.content| limitTo:100}}...</p>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-click="readMore(article._id)" class="md-raised md-primary">Read More
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </md-list-item>
+        </md-list>
+    </form>
+</div>

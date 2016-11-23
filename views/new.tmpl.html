@@ -1,9 +1,9 @@
+<md-subheader class="md-primary"><h1>{{title}}</h1></md-subheader>
 <div layout="column" name="new">
-    <h1>{{title}}</h1>
     <h4>Inputs with <span style="color: red;">*</span> are required!</h4><br>
 </div>
 <form name="new-form" id="new-form" layout="row">
-    <div flex="40">
+    <div flex="40" layout="column">
         <md-input-container>
             <label>Title</label>
             <input required type="title" name="title" ng-model="article.title" ng-required>
@@ -13,12 +13,15 @@
                 </div>
             </div>
         </md-input-container>
-        <md-chips ng-model="article.tags" readonly="false" md-removable="true"></md-chips>
+        <md-input-container>
+            <label>Tags</label>
+            <md-chips ng-model="article.tags" readonly="false" md-removable="true"></md-chips>
+        </md-input-container>
     </div>
     <div flex="60">
         <md-input-container class="md-block">
             <label>Content</label>
-            <textarea required type="content" name="content" ng-model="article.content" ng-required rows="10"
+            <textarea required type="content" name="content" ng-model="article.content" ng-required rows="6"
                       md-select-on-focus></textarea>
             <div ng-messages="new-form.content.$error" role="alert">
                 <div ng-message-exp="['required']">

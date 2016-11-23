@@ -23,6 +23,10 @@ ngblog.service('AuthorService', function ($http, $state) {
         return $http.post(baseUrl, author);
     }
 
+    this.getAuthorById = function (id) {
+        return $http.get(baseUrl + '/' + id);
+    }
+
     this.findByEmailAndPassword = function (email, password) {
         var query = {
             "query": {

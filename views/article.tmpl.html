@@ -1,0 +1,19 @@
+<div layout="row">
+    <div flex="70">
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{article.title}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p style="text-align: justify">{{article.content}}</p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button ng-click="readMore(article.author)" class="md-raised md-primary">Visit Author Profile
+                </md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div flex></div>
+</div>

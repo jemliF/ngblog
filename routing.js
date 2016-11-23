@@ -37,6 +37,24 @@ ngblog.config(function ($stateProvider) {
             resolve: {
                 redirectIfNotAuthenticated: _redirectIfNotAuthenticated
             }
+        })
+        .state({
+            name: 'article',
+            url: '/article/:id',
+            controller: 'ArticleController',
+            templateUrl: 'views/article.tmpl.html',
+            resolve: {
+                redirectIfNotAuthenticated: _redirectIfNotAuthenticated
+            }
+        })
+        .state({
+            name: 'author',
+            url: '/author/:id',
+            controller: 'AuthorController',
+            templateUrl: 'views/author.tmpl.html',
+            resolve: {
+                redirectIfNotAuthenticated: _redirectIfNotAuthenticated
+            }
         });
     $stateProvider
         .state("otherwise", {url: '/home'});

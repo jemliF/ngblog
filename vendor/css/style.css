@@ -75,3 +75,7 @@
 .chipsdemoBasicUsage .custom-chips md-chips-wrap.md-removable md-chip md-chip-template {
     padding-right: 5px;
 }
+
+.listdemoBasicUsage md-divider {
+    margin-top: 10px;
+    margin-bottom: 0; }
