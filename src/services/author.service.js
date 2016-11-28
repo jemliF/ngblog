@@ -1,7 +1,7 @@
 'use strict';
 
 ngblog.service('AuthorService', function ($http, $state) {
-    var baseUrl = 'http://localhost:9200/ngblog/author';
+    var baseUrl = 'http://root:admin@localhost:8080/ngblog/author';
 
     this.isLoggedIn = function () {
         return localStorage.getItem('user');

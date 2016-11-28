@@ -1,7 +1,7 @@
 'use strict';
 
 ngblog.service('ArticleService', function ($http) {
-    var baseUrl = 'http://localhost:9200/ngblog/article';
+    var baseUrl = 'http://root:admin@localhost:8080/ngblog/article';
 
     this.new = function (article) {
         var currentdate = new Date();

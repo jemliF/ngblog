@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41b38019-2d7e-440a-994a-342003977551" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/article.ctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/author.ctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/icons/ic_edit_black_18px.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/article.tmpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/author.tmpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routing.js" afterPath="$PROJECT_DIR$/routing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/home.ctrl.js" afterPath="$PROJECT_DIR$/src/controllers/home.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/article.service.js" afterPath="$PROJECT_DIR$/src/services/article.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/author.service.js" afterPath="$PROJECT_DIR$/src/services/author.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/css/style.css" afterPath="$PROJECT_DIR$/vendor/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home.tmpl.html" afterPath="$PROJECT_DIR$/views/home.tmpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.tmpl.html" afterPath="$PROJECT_DIR$/views/login.tmpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/new.tmpl.html" afterPath="$PROJECT_DIR$/views/new.tmpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/signup.tmpl.html" afterPath="$PROJECT_DIR$/views/signup.tmpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/toolbar.tmpl.html" afterPath="$PROJECT_DIR$/views/toolbar.tmpl.html" />
     </list>
     <ignored path="ngblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.tmpl.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.tmpl.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/home.tmpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            <state relative-caret-position="211">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#md-list-item#0;n#md-list#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#md-list-item#0;n#md-list#0;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -109,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.ctrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.ctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/home.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -192,8 +175,8 @@
         <option value="$PROJECT_DIR$/views/article.tmpl.html" />
         <option value="$PROJECT_DIR$/views/new.tmpl.html" />
         <option value="$PROJECT_DIR$/src/services/article.service.js" />
-        <option value="$PROJECT_DIR$/views/home.tmpl.html" />
         <option value="$PROJECT_DIR$/src/controllers/home.ctrl.js" />
+        <option value="$PROJECT_DIR$/views/home.tmpl.html" />
       </list>
     </option>
   </component>
@@ -454,12 +437,12 @@
       <workItem from="1479811274578" duration="4211000" />
       <workItem from="1479816436422" duration="599000" />
       <workItem from="1479846815266" duration="11345000" />
-      <workItem from="1479894020628" duration="15929000" />
+      <workItem from="1479894020628" duration="16752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42179000" />
+    <option name="totallyTimeSpent" value="43002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="745" extended-state="6" />
@@ -802,22 +785,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/home.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#md-list-item#0;n#md-list#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#md-list-item#0;n#md-list#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/home.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#md-list-item#0;n#md-list#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#md-card-content#0;n#md-card#0;n#md-list-item#0;n#md-list#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
